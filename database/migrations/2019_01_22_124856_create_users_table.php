@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
  * Class CreateUsersTable.
@@ -33,7 +34,7 @@ class CreateUsersTable extends Migration
 			$table->string('permission')->default('app.user');
 			$table->rememberToken();
 			$table->timestamps();
-			$table->softDelete();
+			
 		});
 	}
 
